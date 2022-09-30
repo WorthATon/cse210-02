@@ -2,28 +2,19 @@
 
 Hilo Game
 
-## class: Player
+#### class: Player
 
-total_score: int
+total_score: **int**
+is_playing: **Bool**
+total_score: **int**
+start_game(): **None**
+card_inputs(): **None**
+do_outputs(): **None**
+do_updates(): **None**
+game_inputs(): **Bool**
 
-is_playing: Bool
+##### class: Card
 
-total_score: int
-
-start_game(): None
-
-card_inputs(): None
-
-do_outputs(): None
-
-do_updates(): None
-
-game_inputs(): Bool
-
-## class: Card
-
-value: int
-
-point: int
-
-shuffle(): None
+value: **int**
+point: **int**
+shuffle(): **None**
