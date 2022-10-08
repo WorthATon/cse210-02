@@ -32,7 +32,7 @@ class Player:
 # -Initiate other classes (Player and Decks)
 # -Initiate the game
 # -Calculates the guess
-class Game:
+class Dealer:
     def __init__(self, initialPoints, rightGuessPoints, wrongGuessPoints, numberCards):
         self.initialPoints = initialPoints
         self.rightGuessPoints = rightGuessPoints
@@ -46,39 +46,48 @@ class Game:
         revealedCard = self.deck.revealCard()
         if guess.lower() == "l":
             if revealedCard < currentCard:
-                game.player.setPoints(self.rightGuessPoints)
+                dealer.player.setPoints(self.rightGuessPoints)
             else:
-                game.player.setPoints(self.wrongGuessPoints)
+                dealer.player.setPoints(self.wrongGuessPoints)
         else:
             if revealedCard > currentCard:
-                game.player.setPoints(self.rightGuessPoints)
+                dealer.player.setPoints(self.rightGuessPoints)
             else:
-                game.player.setPoints(self.wrongGuessPoints)
+                dealer.player.setPoints(self.wrongGuessPoints)
 
 if __name__ == "__main__":
-    #initiate Game class with the parameters for:
+    #initiate Dealer class with the parameters for:
     # Initial points (300)
     # Right guess points (100) 
     # Wrong guess points (-75) 
     # Number of cards (13)
-    game = Game(300, 100, -75, 13)
-
+    dealer = Dealer(300, 100, -75, 13)
+    print("Welcome to Hilo")
+    print("We will start you out with 300 points.")
+    print("You will be given a number that represents a card.")
+    print("You will then be asked to guess if the next")
+    print("card displayed will be higher or lower than ")
+    print("the card you currently see. Once you make your guess,")
+    print("we will show you the next card. If your guess was")
+    print("correct, we will give you 100 points. ")
+    print("If you guess was incorrect, we will deduct 75 point.")
+    print("We hope you will enjoy the game")
     answer = "y"
     while answer.lower()== "y":
         print("")
-        print(f"The card is: {game.deck.currentCard}")
+        print(f"The card is: {dealer.deck.currentCard}")
         guess = input("Higher or lower? [h/l] ")
-        game.calculateGuess(guess)
+        dealer.calculateGuess(guess)
 
-        if (game.player.points <= 0):
-            print(f"Your score is: {game.player.points}")
-            print("The game is over.")
+        if (dealer.player.points <= 0):
+            print(f"Your score is: {dealer.player.points}")
+            print("Sorry, you have no more points available. The game is over.")
             break
 
-        print(f"Next card was: {game.deck.currentCard}")
-        print(f"Your score is: {game.player.points}")
+        print(f"Next card was: {dealer.deck.currentCard}")
+        print(f"Your score is: {dealer.player.points}")
 
-        answer = input("Play again? [y/n] ")
+        answer = input("Would you like to play again? [y/n] ")
     else:
-        print("The game is over.")
+        print("Thank you for playing. The game is now over.")
 
