@@ -1,25 +1,19 @@
 # cse210-02
 
-Hilo Game
+## Hilo Game
 
-> #### class: Player
+| class: Player |             |
+| :------------ | :---------: |
+| is_playing    | **Boolean** |
+| total_score   |   **Int**   |
+| start_game()  |  **None**   |
+| card_inputs() |  **None**   |
+| do_outputs()  |  **None**   |
+| do_updates()  |  **None**   |
+| game_inputs() | **Boolean** |
 
----
-
-> class: **Player**
-> total_score: **int**
-> is_playing: **Bool**
-> total_score: **int**
-> start_game(): **None**
-> card_inputs(): **None**
-> do_outputs(): **None**
-> do_updates(): **None**
-> game_inputs(): **Bool**
-
-> #### class: Card
-
----
-
-> value: **int**  
-> point: **int**  
-> shuffle(): **None**
+| class: Card |          |
+| :---------- | :------: |
+| value       | **Int**  |
+| point       | **Int**  |
+| suffle()    | **None** |
