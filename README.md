@@ -4,6 +4,8 @@ Hilo Game
 
 > #### class: Player
 
+---
+
 > class: **Player**
 > total_score: **int**
 > is_playing: **Bool**
@@ -15,6 +17,8 @@ Hilo Game
 > game_inputs(): **Bool**
 
 > #### class: Card
+
+---
 
 > value: **int**  
 > point: **int**  
