@@ -9,7 +9,7 @@ class Card:
 
     The responsibility of Die is to keep track of the side facing up and calculate the points for 
     it.
-
+   
     Attributes:
         value (int): The number of spots on the side facing up.
         points (int): The number of points the die is worth.
@@ -28,15 +28,15 @@ class Card:
 
 # 3) Create the roll(self) method. Use the following method comment.
 
+
     def draw(self, new_number):
         """Generates a new random value and calculates the points.
-
+        
         Args:
             self (Die): An instance of Die.
         """
         # self.number = random.randint(1, 13)
         self.number = new_number
-
     def read(self):
         return self.number
         # self.points = 100 if self.value => self.value else 100 if self.value == 1 else 0
